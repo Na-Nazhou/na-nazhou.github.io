@@ -2,6 +2,11 @@
 layout: "wrapper"
 ---
 
+<h3>People</h3>
+{% for person in site.data.people %}
+  {{ person.name }}, {{ person.occupation }} <br>
+{% endfor %}
+
 <h3>Posts</h3>
 <ul>
 {% for post in site.posts %}

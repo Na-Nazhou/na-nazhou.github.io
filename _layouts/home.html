@@ -2,6 +2,14 @@
 layout: "wrapper"
 ---
 
+<h3>Files</h3>
+{% for file in site.static_files %}
+  {% if file.image %}
+    <img src="{{ file.path }}" alt="{{ file.name }}"><br>
+  {% endif %}
+  {{ file.path }}, {{ file.name }}, {{ file.basename }}, {{ file.extname }} <br>
+{% endfor %}
+
 <h3>People</h3>
 {% for person in site.data.people %}
   {{ person.name }}, {{ person.occupation }} <br>
